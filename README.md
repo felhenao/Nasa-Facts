@@ -4,8 +4,8 @@ Grid displaying some of the NASA’s fun facts
 
 ### Specs
 
-- [React.js] 
-- [CSS-Modules]
+- React.js
+- CSS-Modules
 
 ### Install
 
@@ -23,5 +23,3 @@ run npm start
 
 ```
 
-[React.js]: <<ins>https://reactjs.org/</ins>>
-[CSS-Modules]: <<ins>https://github.com/css-modules/css-modules</ins>>

@@ -1,29 +1,27 @@
 import React from 'react';
 import GridItem from './GridItem';
 import cx from 'classnames';
-
 import styles from './Grid.module.css';
 import mediaStyles from './Media.module.css';
-import classnames from 'classnames';
 
-export default class App extends React.Component {
-  updateClicked(id) {
+const Grid = (props) => {
+  const updateClicked = (id) => {
     this.props.updateClicked(id);
   }
-  renderFacts() {
-    return this.props.facts.map(item => 
+  const renderFacts = () => {
+    return props.facts.map(item => 
       <GridItem
         key={item.id}
         fact={item}
-        updateClicked={this.updateClicked.bind(this)}
+        updateClicked={updateClicked}
         />
-      )
+    )
   }
-  render() {
-    return (
-      <section className={cx(styles.grid, mediaStyles.grid)}>
-        {this.renderFacts()}
-      </section>
-    );
-  }
+  return (
+    <section className={cx(styles.grid, mediaStyles.grid)}>
+      {renderFacts()}
+    </section>
+  );
 }
+
+export default Grid;
