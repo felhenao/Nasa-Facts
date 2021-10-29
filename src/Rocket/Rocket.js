@@ -1,9 +1,19 @@
 import React from 'react';
-import styles from './Rocket.module.css';
+import styled from 'styled-components';
+
+const Image = styled.img`
+  postition: relative;
+  bottom: -25px;
+  width: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: auto;
+  z-index: 99;
+`;
 
 const Rocket = () => (
   <>
-    <img src="/shuttle.png" alt="shuttle" className={styles.img} />
+    <Image src="/shuttle.png" alt="shuttle" />
   </>
 );
 

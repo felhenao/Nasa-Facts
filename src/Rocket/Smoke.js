@@ -1,11 +1,24 @@
 /* eslint-disable */
 import React from 'react';
-import styles from './Smoke.module.css';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  position: relative;
+  bottom: 0px;
+  margin-top: -500px;
+  z-index: 99;
+`;
+
+const Video = styled.video`
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+`;
 
 const Smoke = () => (
-  <div className={styles.smoke}>
-    <video className={styles.video} autoPlay loop src="/smoke.mov" />
-  </div>
+  <Container>
+    <Video autoPlay loop src="/smoke.mov" />
+  </Container>
 );
 
 export default Smoke;
