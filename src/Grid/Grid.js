@@ -1,9 +1,25 @@
 import React from 'react';
-import cx from 'classnames';
+import styled from 'styled-components';
 import GridItem from './GridItem';
-import styles from './Grid.module.css';
-import mediaStyles from './Media.module.css';
 import facts from '../data/NASA_facts.json';
+
+const Section = styled.section`
+  padding: 175px 20px 10px 20px;
+  column-gap: 10px;
+  column-count: 3;
+
+  @media (max-width: 1024px) {
+    column-gap: 10px;
+    column-count: 2;
+    padding: 175px 10px 10px 10px;
+  }
+
+  @media (max-width: 768px) {
+    column-gap: 100px;
+    column-count: 1;
+    padding: 175px 5px 10px 5px;
+  }
+`;
 
 const Grid = () => {
   const renderFacts = () => (
@@ -11,9 +27,9 @@ const Grid = () => {
   );
 
   return (
-    <section className={cx(styles.grid, mediaStyles.grid)}>
+    <Section>
       {renderFacts()}
-    </section>
+    </Section>
   );
 };
 

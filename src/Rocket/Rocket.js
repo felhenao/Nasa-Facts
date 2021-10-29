@@ -12,9 +12,7 @@ const Image = styled.img`
 `;
 
 const Rocket = () => (
-  <>
-    <Image src="/shuttle.png" alt="shuttle" />
-  </>
+  <Image src="/shuttle.png" alt="shuttle" />
 );
 
 export default Rocket;
