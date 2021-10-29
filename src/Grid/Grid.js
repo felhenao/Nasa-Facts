@@ -1,27 +1,20 @@
 import React from 'react';
-import GridItem from './GridItem';
 import cx from 'classnames';
+import GridItem from './GridItem';
 import styles from './Grid.module.css';
 import mediaStyles from './Media.module.css';
+import facts from '../data/NASA_facts.json';
 
-const Grid = (props) => {
-  const updateClicked = (id) => {
-    this.props.updateClicked(id);
-  }
-  const renderFacts = () => {
-    return props.facts.map(item => 
-      <GridItem
-        key={item.id}
-        fact={item}
-        updateClicked={updateClicked}
-        />
-    )
-  }
+const Grid = () => {
+  const renderFacts = () => (
+    facts.map((item) => <GridItem key={item.id} fact={item} />)
+  );
+
   return (
     <section className={cx(styles.grid, mediaStyles.grid)}>
       {renderFacts()}
     </section>
   );
-}
+};
 
 export default Grid;
